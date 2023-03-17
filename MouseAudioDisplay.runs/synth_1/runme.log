@@ -1,0 +1,804 @@
+
+*** Running vivado
+    with args -log Top_Student.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Top_Student.tcl -notrace
+Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23152 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 355.203 ; gain = 98.551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:13]
+INFO: [Synth 8-6157] synthesizing module 'wj_audio_out' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_dff' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/my_dff.v:3]
+	Parameter ten_ms bound to: 100000 - type: integer 
+	Parameter one_sec bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'my_dff' (1#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/my_dff.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/clk50M.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'clock' (2#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/clk50M.v:3]
+INFO: [Synth 8-638] synthesizing module 'Audio_Output' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Output' (3#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+WARNING: [Synth 8-350] instance 'audio_out' of module 'Audio_Output' requires 10 connections, but only 8 given [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'wj_audio_out' (4#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (5#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 410.359 ; gain = 153.707
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[11] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[10] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[9] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[8] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[7] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[6] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[5] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[4] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[3] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[2] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[1] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[0] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 410.359 ; gain = 153.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 410.359 ; gain = 153.707
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 744.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "isBlocked0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "one_sec_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Audio_Output'
+INFO: [Synth 8-5544] ROM "DONE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                shiftout |                             0010 |                               01
+                syncdata |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Audio_Output'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module my_dff 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               20 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clock 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Audio_Output 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/isBlocked0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/one_sec_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk190/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk50M/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk20k/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[0]' (FD) to 'wj/nolabel_line28/filtered_reg[3]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[1]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[2]' (FD) to 'wj/nolabel_line28/filtered_reg[4]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[3]' (FD) to 'wj/nolabel_line28/filtered_reg[7]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[4]' (FD) to 'wj/nolabel_line28/filtered_reg[9]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[5]' (FD) to 'wj/nolabel_line28/filtered_reg[6]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[6]' (FD) to 'wj/nolabel_line28/filtered_reg[10]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[7]' (FD) to 'wj/nolabel_line28/filtered_reg[11]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[8]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[9]' (FD) to 'wj/nolabel_line28/filtered_reg[14]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[10]' (FD) to 'wj/nolabel_line28/filtered_reg[19]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[11]' (FD) to 'wj/nolabel_line28/filtered_reg[15]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[12]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[14]' (FD) to 'wj/nolabel_line28/filtered_reg[16]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[15]' (FD) to 'wj/nolabel_line28/filtered_reg[17]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[16]' (FD) to 'wj/nolabel_line28/filtered_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wj/nolabel_line28/filtered_reg[19] )
+WARNING: [Synth 8-3332] Sequential element (wj/nolabel_line28/filtered_reg[19]) is unused and will be removed from module Top_Student.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 744.773 ; gain = 488.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 757.832 ; gain = 501.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[0]) is unused and will be removed from module Top_Student.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    44|
+|3     |LUT1   |     5|
+|4     |LUT2   |    33|
+|5     |LUT3   |    15|
+|6     |LUT4   |    40|
+|7     |LUT5   |    45|
+|8     |LUT6   |    13|
+|9     |FDRE   |   182|
+|10    |FDSE   |    11|
+|11    |IBUF   |     3|
+|12    |OBUF   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-------------+------+
+|      |Instance           |Module       |Cells |
++------+-------------------+-------------+------+
+|1     |top                |             |   396|
+|2     |  wj               |wj_audio_out |   388|
+|3     |    audio_out      |Audio_Output |    49|
+|4     |    clk190         |clock        |    84|
+|5     |    clk20k         |clock_0      |    54|
+|6     |    clk50M         |clock_1      |    52|
+|7     |    nolabel_line28 |my_dff       |   149|
++------+-------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 759.164 ; gain = 168.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 759.164 ; gain = 502.512
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 759.164 ; gain = 515.344
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 759.164 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 17 10:59:05 2023...
+
+*** Running vivado
+    with args -log Top_Student.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Top_Student.tcl -notrace
+Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 31676 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 355.480 ; gain = 99.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:13]
+INFO: [Synth 8-6157] synthesizing module 'wj_audio_out' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_dff' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/my_dff.v:3]
+	Parameter ten_ms bound to: 100000 - type: integer 
+	Parameter one_sec bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'my_dff' (1#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/my_dff.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clock' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/clk50M.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'clock' (2#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/clk50M.v:3]
+INFO: [Synth 8-638] synthesizing module 'Audio_Output' [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Output' (3#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/imports/Desktop/Audio_Output.vhd:63]
+WARNING: [Synth 8-350] instance 'audio_out' of module 'Audio_Output' requires 10 connections, but only 8 given [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'wj_audio_out' (4#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (5#1) [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/Top_Student.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 410.746 ; gain = 154.363
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[11] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[10] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[9] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[8] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[7] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[6] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[5] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[4] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[3] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[2] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[1] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+WARNING: [Synth 8-3295] tying undriven pin audio_out:DATA2[0] to constant 0 [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/sources_1/new/wenjun.v:34]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 410.746 ; gain = 154.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 410.746 ; gain = 154.363
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 744.234 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "isBlocked0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "one_sec_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Audio_Output'
+INFO: [Synth 8-5544] ROM "DONE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                shiftout |                             0010 |                               01
+                syncdata |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'Audio_Output'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module my_dff 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               20 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     20 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clock 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Audio_Output 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/counter0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/isBlocked0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/nolabel_line28/one_sec_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk190/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk50M/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wj/clk20k/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[0]' (FD) to 'wj/nolabel_line28/filtered_reg[3]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[1]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[2]' (FD) to 'wj/nolabel_line28/filtered_reg[4]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[3]' (FD) to 'wj/nolabel_line28/filtered_reg[7]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[4]' (FD) to 'wj/nolabel_line28/filtered_reg[9]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[5]' (FD) to 'wj/nolabel_line28/filtered_reg[6]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[6]' (FD) to 'wj/nolabel_line28/filtered_reg[10]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[7]' (FD) to 'wj/nolabel_line28/filtered_reg[11]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[8]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[9]' (FD) to 'wj/nolabel_line28/filtered_reg[14]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[10]' (FD) to 'wj/nolabel_line28/filtered_reg[19]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[11]' (FD) to 'wj/nolabel_line28/filtered_reg[15]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[12]' (FD) to 'wj/nolabel_line28/filtered_reg[13]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[14]' (FD) to 'wj/nolabel_line28/filtered_reg[16]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[15]' (FD) to 'wj/nolabel_line28/filtered_reg[17]'
+INFO: [Synth 8-3886] merging instance 'wj/nolabel_line28/filtered_reg[16]' (FD) to 'wj/nolabel_line28/filtered_reg[18]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\wj/nolabel_line28/filtered_reg[19] )
+WARNING: [Synth 8-3332] Sequential element (wj/nolabel_line28/filtered_reg[19]) is unused and will be removed from module Top_Student.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 744.234 ; gain = 487.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 758.117 ; gain = 501.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[4]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[3]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[2]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[1]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (wj/audio_out/temp2_reg[0]) is unused and will be removed from module Top_Student.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    44|
+|3     |LUT1   |     5|
+|4     |LUT2   |    33|
+|5     |LUT3   |    15|
+|6     |LUT4   |    40|
+|7     |LUT5   |    45|
+|8     |LUT6   |    13|
+|9     |FDRE   |   182|
+|10    |FDSE   |    11|
+|11    |IBUF   |     3|
+|12    |OBUF   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-------------+------+
+|      |Instance           |Module       |Cells |
++------+-------------------+-------------+------+
+|1     |top                |             |   396|
+|2     |  wj               |wj_audio_out |   388|
+|3     |    audio_out      |Audio_Output |    49|
+|4     |    clk190         |clock        |    84|
+|5     |    clk20k         |clock_0      |    54|
+|6     |    clk50M         |clock_1      |    52|
+|7     |    nolabel_line28 |my_dff       |   149|
++------+-------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 759.828 ; gain = 169.957
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 759.828 ; gain = 503.445
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 759.828 ; gain = 516.332
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jessi/Downloads/MouseAudioDisplay.xpr/MouseAudioDisplay/MouseAudioDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 759.828 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 17 11:07:57 2023...
