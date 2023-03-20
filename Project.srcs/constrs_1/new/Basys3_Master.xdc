@@ -139,16 +139,15 @@ set_property PACKAGE_PIN G2 [get_ports JA[3]]
 	set_property IOSTANDARD LVCMOS33 [get_ports JA[3]]
 
 ##Pmod Header JB
-set_property PACKAGE_PIN A14 [get_ports JB[0]]
-	set_property IOSTANDARD LVCMOS33 [get_ports JB[0]]
-set_property PACKAGE_PIN A16 [get_ports JB[0]]
-	set_property IOSTANDARD LVCMOS33 [get_ports JB[0]]
-set_property PACKAGE_PIN B15 [get_ports JB[1]]
-	set_property IOSTANDARD LVCMOS33 [get_ports JB[1]]
-set_property PACKAGE_PIN B16 [get_ports JB[2]]
-	set_property IOSTANDARD LVCMOS33 [get_ports JB[2]]
-set_property PACKAGE_PIN A15 [get_ports JB[2]]
-	set_property IOSTANDARD LVCMOS33 [get_ports JB[2]]
+set_property PACKAGE_PIN A14 [get_ports {J_MIC3_Pin1}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {J_MIC3_Pin1}]
+
+set_property PACKAGE_PIN B15 [get_ports {J_MIC3_Pin3}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {J_MIC3_Pin3}]
+
+set_property PACKAGE_PIN B16 [get_ports {J_MIC3_Pin4}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {J_MIC3_Pin4}]
+
 
 ##USB HID (PS/2)
 set_property PACKAGE_PIN C17 [get_ports ps2_clk]

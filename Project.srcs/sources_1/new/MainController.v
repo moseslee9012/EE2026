@@ -17,7 +17,9 @@ module MainController(
     output [3:0] an,
     output [7:0] seg,
     output reg [15:0] led,
-    output [2:0] JB,       // Audio In port
+    input J_MIC3_Pin3, 
+    output J_MIC3_Pin1, 
+    output J_MIC3_Pin4,       // Audio In port
     output [3:0] JA,       // Audio Out port
     output [7:0] JC,       // OLED Display port
     inout ps2_clk,         // Used for mouse
@@ -38,9 +40,9 @@ module MainController(
     Audio_Input audio_in_module(
         .CLK(sysclk),
         .cs(clock20k),
-        .MISO(JB[1]),
-        .clk_samp(JB[0]),            
-        .sclk(JB[2]),            
+        .MISO(J_MIC3_Pin3),                
+        .clk_samp(J_MIC3_Pin1),            
+        .sclk(J_MIC3_Pin4),             
         .sample(audio_in_data)   
     );
     
