@@ -172,7 +172,7 @@ module MainController(
             end
             // Group task
             4'd5: begin
-                led <= {value_detected_group ? {1'b1, 6'b0} : 7'b0, audio_vol_led};
+                led <= {value_detected_group ? 7'b1000000 : 7'b0, audio_vol_led};
                 audio_out_data <= 0;
                 oled_colour_data <= oled_colour_group;
                 sed_digits_in <= 16'd100 * value_detected_group + audio_vol_led;

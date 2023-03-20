@@ -22,7 +22,7 @@ module GroupTask(
     Cursor cursor(.pixel_x(pixel_x), .pixel_y(pixel_y), .mouse_x(mouse_x), .mouse_y(mouse_y), .radius(2'h1), .enabled(cursor_enabled));
     
     always @ (posedge clk) begin
-        if (left & ~left_prev) begin
+        if (left & ~left_prev & enabled) begin
             if (mouse_x >= 21 & mouse_x <= 37) begin
                 if (mouse_y >= 5 & mouse_y <= 9)
                     rectangle_enabled[0] <= ~rectangle_enabled[0];
@@ -70,7 +70,7 @@ module GroupTask(
             coloured[0] <= 0;
         end
         
-        if (sw15 & ~sw15_prev) begin
+        if (sw15 & ~sw15_prev & enabled) begin
             case (rectangle_enabled)
                 7'b0111111: val <= 1;  // 0
                 7'b0000110: val <= 2;  // 1
@@ -78,7 +78,7 @@ module GroupTask(
                 7'b1001111: val <= 4;  // 3
                 7'b1100110: val <= 5;  // 4
                 7'b1101101: val <= 6;  // 5
-                7'b0111101: val <= 7;  // 6
+                7'b1111101: val <= 7;  // 6
                 7'b0000111: val <= 8;  // 7
                 7'b1111111: val <= 9;  // 8
                 7'b1101111: val <= 10; // 9
