@@ -6,8 +6,8 @@ module MosesOledDisplay(
     input [7:0] y,           // The y position of the current pixel being coloured
     input [15:0] sw,
     output reg [15:0] colour // Colour of this pixel, based on whether the switch is toggled
-    );
-    
+);
+
     always @ (posedge clk) begin
         if (~sw[0] & ((x > 57 & x < 61 & y < 61) | (y > 57 & y < 61 & x < 61)))
         begin
@@ -24,6 +24,6 @@ module MosesOledDisplay(
         end else
         begin
             colour <= 0;
-        end;
+        end
     end
-endmodule
+    endmodule
