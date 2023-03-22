@@ -124,6 +124,9 @@ module MainController(
     wire [8:0] audio_vol_led;
     ZhongHengAudioIn zh(.clk(clock20k), .audio_in(audio_in_data), .volume(audio_vol_zh), .led_out(audio_vol_led));
     
+    wire [15:0] oled_zh;
+    ZhongHengOLED zholed (.clk(sysclk), .x(pixel_x), .y(pixel_y), .sw(sw), .colour(oled_zh));
+    
     wire [11:0] audio_out_wj;
     WenJunAudioOut wj(.enabled(state == 2), .clk(sysclk), .btnC(btn[4]), .sw(sw[0]), .audio_out(audio_out_wj));
     
@@ -144,7 +147,7 @@ module MainController(
             4'd1: begin
                 led <= audio_vol_led;
                 audio_out_data <= 0;
-                oled_colour_data <= 0;
+                oled_colour_data <= oled_zh;
                 sed_digits_in <= audio_vol_zh;
                 sed_data <= {{24{1'b1}}, sed_digits_out[7:0]};
             end
